@@ -1,0 +1,19 @@
+{
+  "name": "gregorymathis_3_10062021",
+  "version": "1.0.0",
+  "description": "projet3_ohmyfood",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/styles.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gregorymathis/gregorymathis_3_10062021.git"
+  },
+  "author": "gregorymathis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gregorymathis/gregorymathis_3_10062021/issues"
+  },
+  "homepage": "https://github.com/gregorymathis/gregorymathis_3_10062021#readme"
+}
