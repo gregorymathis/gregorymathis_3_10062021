@@ -2,3 +2,34 @@
     margin: 0;
     padding: 0;
 }
+body{
+    width: 100%;
+    font-family: Roboto;
+}
+img{
+    width: 50%;
+}
+.logo{
+    text-align: center;
+    padding: 1rem;
+}
+.position{
+    text-align: center;
+    padding: 1rem;
+    background-color: #eaeaea;
+    i{
+        padding-right: 1rem;
+    }
+}
+.accueil{
+    text-align: center;
+    background-color: #f6f6f6;
+    padding: 1rem;
+    h1{
+        margin-bottom: 1rem;
+    }
+    p{
+        margin-bottom: 1rem;
+        color: #838383;
+    }
+}

@@ -4,6 +4,8 @@
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <link rel="stylesheet" href="css/styles.css">
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+            <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
             <script src="https://kit.fontawesome.com/7e960337d7.js" crossorigin="anonymous"></script>
             <title>OhMyFood!</title>
         </head>
@@ -16,11 +18,11 @@
                     <img src="Maquettes/images/logo/ohmyfood.png" alt="logo ohmyfood">
                 </div>
 
-                <div class="position">
-                    <p><i class="fas fa-map-marker-alt"></i>Paris, Belleville</p>
-                </div>
-
             </header>
+
+            <main>
+
+            <p class="position"><i class="fas fa-map-marker-alt"></i>Paris, Belleville</p>
 
             <section class="accueil">
 
@@ -28,33 +30,26 @@
 
                 <p>Découvrez des restaurants d'exception, séléctionnés par nos soins.</p>
 
-                <div class="btn_explorer">
-                    <p>Explorer nos restaurants</p>
-                </div>
+                <a href="#"><span>Explorer nos restaurants</span></a>
 
             </section>
 
-            <h2>Fonctionnement</h2>
 
             <section class="fonctionnement">
 
-                <div class="fonctionnement--option">
-                    <i class="fas fa-circle"></i>
-                    <i class="fas fa-mobile-alt"></i>
-                    <p>Choisissez un restaurant</p>
-                </div>
+                <h2>Fonctionnement</h2>
 
-                <div class="fonctionnement--option">
-                    <i class="fas fa-circle"></i>
-                    <i class="fas fa-list-ul"></i>
-                    <p>Composez votre menu</p>
-                </div>
-
-                <div class="fonctionnement--option">
-                    <i class="fas fa-circle"></i>
-                    <i class="fas fa-store"></i>
-                    <p>Dégustez au restaurant</p>
-                </div>
+                <ol>
+                    <li>
+                        <i class="fas fa-mobile-alt"></i> Choisissez un restaurant
+                    </li>
+                    <li>
+                        <i class="fas fa-list-ul"></i> Composez votre menu
+                    </li>
+                    <li>
+                        <i class="fas fa-store"></i> Dégustez au restaurant
+                    </li>
+                </ol>
 
             </section>
 
@@ -62,31 +57,45 @@
 
                 <h2>Restaurants</h2>
 
-                <div class="restaurant--affiche">
-                    <h3>La palette du goût</h3>
-                    <p>Ménilmontant</p>
-                    <i class="far fa-heart"></i>
+                <div class="restaurant__affiche">
+                    <figure>
+                        <img src="maquettes/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="restaurant la palette du gout">
+                        <figcaption>La palette du goût</figcaption>
+                        <figcaption>Ménilmontant</figcaption>
+                        <i class="far fa-heart"></i>
+                    </figure>
                 </div>
 
-                <div class="restaurant--affiche">
-                    <h3>La note enchantée</h3>
-                    <p>Charonne</p>
-                    <i class="far fa-heart"></i>
+                <div class="restaurant__affiche">
+                    <figure>
+                        <img src="maquettes/images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="restaurant la palette du gout">
+                        <figcaption>La note enchantée</figcaption>
+                        <figcaption>Charonne</figcaption>
+                        <i class="far fa-heart"></i>
+                    </figure>
                 </div>
 
-                <div class="restaurant--affiche">
-                    <h3>A la française</h3>
-                    <p>Cité Rouge</p>
-                    <i class="far fa-heart"></i>
+                <div class="restaurant__affiche">
+                    <figure>
+                        <img src="maquettes/images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="restaurant la palette du gout">
+                        <figcaption>A la française</figcaption>
+                        <figcaption>Cité Rouge</figcaption>
+                        <i class="far fa-heart"></i>
+                    </figure>
                 </div>
 
-                <div class="restaurant--affiche">
-                    <h3>Le délice des sens</h3>
-                    <p>Folie-Méricourt</p>
-                    <i class="far fa-heart"></i>
+                <div class="restaurant__affiche">
+                    <figure>
+                        <img src="maquettes/images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="restaurant la palette du gout">
+                        <figcaption>Le délice des sens</figcaption>
+                        <figcaption>Folie-Méricourt</figcaption>
+                        <i class="far fa-heart"></i>
+                    </figure>
                 </div>
 
             </section>
+
+            </main>
 
             <footer>
 
@@ -95,12 +104,12 @@
                 </div>
 
                 <ul>
-                    <li>Proposer un restaurant</li>
-                    <li>Devenir partenaire</li>
-                    <li>Mentions légales</li>
-                    <li>Contact</li>
+                    <li><a href="#"> <i class="fas fa-utensils"></i> Proposer un restaurant</a></li>
+                    <li><a href="#"> <i class="fas fa-hands-helping"></i> Devenir partenaire</a></li>
+                    <li><a href="#">Mentions légales</a></li>
+                    <li><a href="#">Contact</a></li>
                 </ul>
-
+ 
             </footer>
 
 
