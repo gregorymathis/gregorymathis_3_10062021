@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* GENERAL */
 * {
   margin: 0;
@@ -25,6 +26,7 @@ body {
   padding: 1rem;
   background-color: #eaeaea;
   color: #3a3a3a;
+  box-shadow: inset 0 0.2rem 0.2rem #d5d5d5;
 }
 .position i {
   padding-right: 1rem;
@@ -60,33 +62,57 @@ body {
 }
 
 /* FONCTIONNEMENT */
-.fonctionnement {
+.bloc_fonctionnement {
   margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
 }
-.fonctionnement li::marker {
-  display: block;
-  background-color: #9356DC;
-  padding: 0.5rem;
-  border-radius: 1rem;
-}
-.fonctionnement h2 {
+.bloc_fonctionnement h2 {
   margin: 3rem 0rem 2rem 1.5rem;
 }
-.fonctionnement li {
-  width: 70%;
-  margin: auto;
-  font-size: 1.1rem;
+.bloc_fonctionnement li {
+  width: 80%;
+  margin-left: 2.3rem;
+  font-size: 0.8rem;
   font-weight: bold;
   background-color: #f6f6f6;
-  padding: 1.7rem;
+  padding: 1.4rem 1.4rem 1.4rem 0;
   margin-bottom: 1.5rem;
   border-radius: 1.5rem;
   box-shadow: 2px 3px 11px #C5C0C3;
 }
-.fonctionnement li i {
-  margin-right: 1.8rem;
-  margin-left: 0.8rem;
-  font-size: 1.2rem;
+.bloc_fonctionnement li h3 {
+  margin-left: 0.6rem;
+}
+
+.fonctionnement {
+  display: flex;
+  flex-direction: column;
+  counter-reset: repas;
+  /* on initialise et nomme un compteur */
+}
+.fonctionnement__menu {
+  display: flex;
+  list-style-type: none;
+  counter-increment: repas;
+  /* on incrémente le compteur à chaque nouveau li */
+}
+.fonctionnement__menu:before {
+  content: counter(repas);
+  /* on affiche le compteur */
+  padding: 0.3rem 0.5rem 0.3rem 0.5rem;
+  margin-right: 1.2rem;
+  margin-left: -0.7rem;
+  vertical-align: top;
+  background: #9356DC;
+  border-radius: 1rem;
+  font-weight: bold;
+  font-size: 0.8em;
+  color: white;
+}
+
+.icon {
+  padding: 5px 20px 5px 5px;
   color: #7e7e7e;
 }
 
@@ -152,10 +178,10 @@ footer {
   color: white;
   padding: 1.5rem;
 }
-footer h3 {
+footer p {
   font-family: "Shrikhand";
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  margin-bottom: 1.3rem;
 }
 footer a {
   text-decoration: none;
@@ -172,6 +198,99 @@ footer .fa-utensils {
 footer .fa-hands-helping {
   font-size: 0.6rem;
   margin-right: 0.2rem;
+}
+
+/* RESTAURANTS */
+.logo_restau {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  margin-right: 1rem;
+}
+.logo_restau i {
+  font-size: 1rem;
+  color: #353535;
+  margin-left: 1rem;
+  margin-right: 5rem;
+}
+.logo_restau img {
+  width: 45%;
+}
+
+.img_restau img {
+  width: 100%;
+  height: auto;
+}
+
+.carte {
+  background-color: #f6f6f6;
+  padding: 1rem;
+  border-top-right-radius: 2rem;
+  border-top-left-radius: 2rem;
+}
+.carte a {
+  display: block;
+  width: 9rem;
+  text-decoration: none;
+  color: #f9ecfa;
+  font-size: 1rem;
+  text-align: center;
+  background-image: linear-gradient(#ff79da, #9356DC);
+  border-radius: 2rem;
+  box-shadow: 2px 3px 11px #C5C0C3;
+  margin: auto;
+  margin-top: 2.5rem;
+  margin-bottom: 3rem;
+  padding: 1rem 1rem 1rem 1rem;
+}
+.carte_menu {
+  margin-bottom: 1rem;
+}
+.carte_menu_plat {
+  background-color: white;
+  padding: 0.8rem;
+  margin: auto;
+  margin-bottom: 0.8rem;
+  border-radius: 1rem;
+}
+.carte_menu_plat h3 {
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+.carte_menu_plat span {
+  font-size: 0.8rem;
+  color: #686868;
+}
+.carte_menu_plat .info {
+  display: flex;
+  justify-content: space-between;
+}
+.carte_menu_plat .info strong {
+  color: black;
+}
+.carte_menu h2 {
+  width: 2.5rem;
+  padding-bottom: 0.2rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  color: #848484;
+  font-weight: normal;
+  border-bottom: 0.2rem solid #99E2D0;
+}
+
+.nom_restau {
+  display: flex;
+  align-items: center;
+  font-family: Shrikhand;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+.nom_restau h1 {
+  margin-right: 2.5rem;
+}
+.nom_restau i {
+  font-size: 1.5rem;
 }
 
 /*# sourceMappingURL=styles.css.map */
