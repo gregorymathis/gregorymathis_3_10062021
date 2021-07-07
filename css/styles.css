@@ -10,6 +10,50 @@ body {
   font-family: Roboto;
 }
 
+/* LOADER */
+.loader {
+  position: absolute;
+  z-index: 999;
+  background-color: #99E2D0;
+  width: 100%;
+  height: 100%;
+  animation: loader 3s forwards;
+}
+
+@keyframes loader {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.load {
+  position: absolute;
+  border-top: 10px solid #9356DC;
+  border-bottom: 10px solid #FF79DA;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 /* HEADER */
 .logo {
   text-align: center;
@@ -17,6 +61,11 @@ body {
 }
 .logo img {
   width: 50%;
+}
+@media screen and (min-width: 1400px) {
+  .logo img {
+    width: 10%;
+  }
 }
 
 /* POSITION */
@@ -53,12 +102,16 @@ body {
   color: #f9ecfa;
   font-size: 1rem;
   text-align: center;
-  background-image: linear-gradient(#ff79da, #9356DC);
+  background-image: linear-gradient(#FF79DA, #9356DC);
   border-radius: 2rem;
   box-shadow: 2px 3px 11px #C5C0C3;
   margin: auto;
   margin-bottom: 2.5rem;
   padding: 1rem 1rem 1rem 1rem;
+}
+.accueil a:hover {
+  background-image: linear-gradient(#ff99e2, #a073d8);
+  box-shadow: 2px 3px 11px #5a5859;
 }
 
 /* FONCTIONNEMENT */
@@ -69,6 +122,11 @@ body {
 }
 .bloc_fonctionnement h2 {
   margin: 3rem 0rem 2rem 1.5rem;
+}
+@media screen and (min-width: 1400px) {
+  .bloc_fonctionnement h2 {
+    text-align: center;
+  }
 }
 .bloc_fonctionnement li {
   width: 80%;
@@ -110,6 +168,21 @@ body {
   font-size: 0.8em;
   color: white;
 }
+.fonctionnement__menu:hover {
+  background-color: #f5edff;
+}
+.fonctionnement__menu:hover .fas {
+  color: #9356DC;
+}
+@media screen and (min-width: 1400px) {
+  .fonctionnement {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin: auto;
+    margin-bottom: -2rem;
+  }
+}
 
 .icon {
   padding: 5px 20px 5px 5px;
@@ -127,6 +200,11 @@ body {
 .restaurants__affiches a {
   text-decoration: none;
   color: black;
+}
+@media screen and (min-width: 1400px) {
+  .restaurants {
+    text-align: center;
+  }
 }
 
 .restaurants__affiche {
@@ -153,6 +231,15 @@ body {
   font-size: 1.5rem;
   margin-right: 0.8rem;
   margin-top: 0.4rem;
+}
+@media screen and (min-width: 1400px) {
+  .restaurants__affiche {
+    width: 20em;
+    height: 16rem;
+    margin-right: 2rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+  }
 }
 
 .restaurants__affiche__img {
@@ -181,6 +268,13 @@ body {
   width: 4rem;
 }
 
+@media screen and (min-width: 1400px) {
+  .restaurants__affiches {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 /* FOOTER */
 footer {
   background-color: #353535;
@@ -196,9 +290,20 @@ footer a {
   text-decoration: none;
   color: white;
 }
+@media screen and (min-width: 1400px) {
+  footer ul {
+    display: flex;
+  }
+}
 footer li {
   list-style: none;
   margin-bottom: 0.6rem;
+}
+@media screen and (min-width: 1400px) {
+  footer li {
+    margin-left: 3rem;
+    margin-right: 2rem;
+  }
 }
 footer .fa-utensils {
   font-size: 0.8rem;
@@ -208,8 +313,31 @@ footer .fa-hands-helping {
   font-size: 0.6rem;
   margin-right: 0.2rem;
 }
+@media screen and (min-width: 1400px) {
+  footer {
+    display: flex;
+    justify-content: center;
+  }
+}
 
 /* AUTRES RESTAURANTS */
+/* ANIMATION COEUR */
+.fa-heart {
+  display: flex;
+  font-size: 3em;
+  color: transparent;
+  -webkit-text-stroke: 1px black;
+  opacity: 0.3;
+}
+
+.fa-heart:hover {
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 0px;
+  opacity: 1;
+  transition: all 1.5s ease-in-out;
+}
+
 .logo_restau {
   display: flex;
   align-items: center;
@@ -252,7 +380,7 @@ footer .fa-hands-helping {
   color: #f9ecfa;
   font-size: 1rem;
   text-align: center;
-  background-image: linear-gradient(#ff79da, #9356DC);
+  background-image: linear-gradient(#FF79DA, #9356DC);
   border-radius: 2rem;
   box-shadow: 2px 3px 11px #C5C0C3;
   margin: auto;
@@ -265,6 +393,9 @@ footer .fa-hands-helping {
 }
 .carte_menu_plat {
   background-color: white;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   padding: 0.8rem;
   margin: auto;
   margin-bottom: 0.8rem;
@@ -308,6 +439,11 @@ footer .fa-hands-helping {
 }
 .nom_restau i {
   font-size: 1.5rem;
+}
+
+.btn a:hover {
+  background-image: linear-gradient(#ff99e2, #a073d8);
+  box-shadow: 2px 3px 11px #5a5859;
 }
 
 /*# sourceMappingURL=styles.css.map */

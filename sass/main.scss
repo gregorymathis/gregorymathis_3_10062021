@@ -1,11 +1,17 @@
 // Variables
 $primaire: #9356DC;
-$secondaire: #ff79da;
+$secondaire: #FF79DA;
 $tertiaire: #99E2D0;
 
 // Mixins
 @mixin shadow {
     box-shadow: 2px 3px 11px  #C5C0C3;
+}
+
+@mixin desktop {
+    @media screen and (min-width:1400px) {
+        @content;
+    }
 }
 
 /* GENERAL */
@@ -18,6 +24,51 @@ body{
     font-family: Roboto;
 }
 
+/* LOADER */
+.loader {
+    position: absolute;
+    z-index: 999;
+    background-color: $tertiaire;
+    width: 100%;
+    height: 100%;
+    animation: loader 3s forwards;
+    }
+@keyframes loader{
+    0%{
+        opacity: 1;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.load{
+    position: absolute;
+    border-top: 10px solid $primaire;
+    border-bottom: 10px solid $secondaire;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    animation: spin 1.5s linear infinite;
+}
+
+@keyframes spin{
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
 /* HEADER */
 
 .logo{
@@ -25,6 +76,9 @@ body{
     padding: 1rem;
     img{
         width: 50%;
+        @include desktop{
+            width: 10%;
+        }
     }
 }
 
@@ -69,6 +123,10 @@ body{
         margin: auto;
         margin-bottom: 2.5rem;
         padding: 1rem 1rem 1rem 1rem;
+        &:hover{
+            background-image: linear-gradient(#ff99e2, #a073d8);
+            box-shadow: 2px 3px 11px  #5a5859;
+        }
     }
 }
 
@@ -80,6 +138,9 @@ body{
     flex-direction: column;
     h2{
         margin: 3rem 0rem 2rem 1.5rem;
+        @include desktop{
+            text-align: center;
+        }
     }
     li{
         width: 80%;
@@ -106,7 +167,7 @@ body{
     display: flex;
     list-style-type: none;
     counter-increment: repas; /* on incrémente le compteur à chaque nouveau li */
-        &:before {
+        &:before{
             content: counter(repas); /* on affiche le compteur */
             padding: 0.3rem 0.5rem 0.3rem 0.5rem;
             margin-right: 1.2rem;
@@ -118,6 +179,19 @@ body{
             font-size: 0.8em;
             color: white;      
         }
+        &:hover{
+            background-color: #f5edff;
+            .fas{
+                color: $primaire;
+            }
+        }
+    }
+    @include desktop{
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+        margin: auto;
+        margin-bottom: -2rem;
     }
 }
 
@@ -140,6 +214,9 @@ body{
             text-decoration: none;
             color: black;
         }
+    }
+    @include desktop{
+        text-align: center;
     }
     }
 .restaurants__affiche{
@@ -166,6 +243,13 @@ body{
         margin-right: 0.8rem;
         margin-top: 0.4rem;
     }
+    @include desktop{
+        width: 20em;
+        height: 16rem;
+        margin-right: 2rem;
+        margin-left: 1rem;
+        margin-top: 1rem;
+    }
 }
 .restaurants__affiche__img{
     width: 100%;
@@ -189,7 +273,12 @@ body{
     text-align: center;
     padding: 0.4rem;
     width: 4rem;
-
+}
+.restaurants__affiches{
+    @include desktop{
+        display: flex;
+        justify-content: center;
+    }
 }
 
     /* FOOTER */
@@ -207,9 +296,18 @@ body{
             text-decoration: none;
             color: white;
         }
+        ul{
+            @include desktop{
+                display: flex;
+            }
+        }
         li{
             list-style: none;
             margin-bottom: 0.6rem;
+            @include desktop{
+                margin-left: 3rem;
+                margin-right: 2rem;
+            }
         }
         .fa-utensils{
             font-size: 0.8rem;
@@ -219,9 +317,35 @@ body{
             font-size: 0.6rem;
             margin-right: 0.2rem;
         }
+        @include desktop{
+            display: flex;
+            justify-content: center;
+        }
     }
 
+
+
     /* AUTRES RESTAURANTS */
+
+    /* ANIMATION COEUR */
+    .fa-heart{
+    display:flex;
+	font-size: 3em;
+	color:transparent;
+	-webkit-text-stroke:1px black;
+	opacity:0.3;
+
+}
+
+.fa-heart:hover{
+	background:linear-gradient(#FF79DA, #9356DC);
+    -webkit-background-clip: text;
+    -webkit-text-stroke: 0px;
+    opacity:1;
+    transition: all 1.5s ease-in-out;
+}
+
+   // LOGO
 
     .logo_restau{
         display: flex;
@@ -281,6 +405,9 @@ body{
             margin-bottom: 1rem;
             &_plat{
                 background-color: white;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
                 padding: 0.8rem;
                 margin: auto;
                 margin-bottom: 0.8rem;
@@ -324,5 +451,12 @@ body{
         }
         i{
             font-size: 1.5rem;
+        }
+    }
+
+    .btn a{
+        &:hover{
+            background-image: linear-gradient(#ff99e2, #a073d8);
+            box-shadow: 2px 3px 11px  #5a5859;
         }
     }
