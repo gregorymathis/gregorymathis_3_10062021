@@ -7,37 +7,67 @@
 
 body {
   width: 100%;
+  height: auto;
   font-family: Roboto;
 }
 
-/* LOADER */
+/*LOADER*/
 .loader {
-  position: absolute;
-  z-index: 999;
-  background-color: #99E2D0;
+  position: fixed;
+  background-color: white;
   width: 100%;
   height: 100%;
-  animation: loader 3s forwards;
+  animation: loader 2s forwards;
 }
 
 @keyframes loader {
   0% {
     opacity: 1;
+    z-index: 1;
   }
   50% {
     opacity: 1;
+    z-index: 1;
   }
   100% {
     opacity: 0;
+    z-index: -1;
   }
 }
-.load {
+.load1 {
   position: absolute;
   border-top: 10px solid #9356DC;
-  border-bottom: 10px solid #FF79DA;
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  animation: spin 1.5s linear infinite;
+}
+
+.load2 {
+  position: absolute;
+  border-right: 10px solid #FF79DA;
+  border-radius: 50%;
+  width: 90px;
+  height: 90px;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  animation: spin 1.5s linear infinite;
+}
+
+.load3 {
+  position: absolute;
+  border-bottom: 10px solid #99E2D0;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
   margin: auto;
   top: 0;
   right: 0;
@@ -62,9 +92,14 @@ body {
 .logo img {
   width: 50%;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1025px) {
   .logo img {
     width: 10%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .logo img {
+    width: 30%;
   }
 }
 
@@ -123,7 +158,12 @@ body {
 .bloc_fonctionnement h2 {
   margin: 3rem 0rem 2rem 1.5rem;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1025px) {
+  .bloc_fonctionnement h2 {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   .bloc_fonctionnement h2 {
     text-align: center;
   }
@@ -141,6 +181,18 @@ body {
 }
 .bloc_fonctionnement li h3 {
   margin-left: 0.6rem;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .bloc_fonctionnement li {
+    width: 50%;
+    margin: auto;
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .bloc_fonctionnement {
+    margin-bottom: 2rem;
+  }
 }
 
 .fonctionnement {
@@ -169,12 +221,12 @@ body {
   color: white;
 }
 .fonctionnement__menu:hover {
-  background-color: #f5edff;
+  background-color: #eadff7;
 }
 .fonctionnement__menu:hover .fas {
   color: #9356DC;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1025px) {
   .fonctionnement {
     display: flex;
     flex-direction: row;
@@ -201,7 +253,12 @@ body {
   text-decoration: none;
   color: black;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1025px) {
+  .restaurants {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   .restaurants {
     text-align: center;
   }
@@ -232,13 +289,21 @@ body {
   margin-right: 0.8rem;
   margin-top: 0.4rem;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1025px) {
   .restaurants__affiche {
-    width: 20em;
+    width: 20rem;
     height: 16rem;
     margin-right: 2rem;
     margin-left: 1rem;
     margin-top: 1rem;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .restaurants__affiche {
+    width: 20rem;
+    height: auto;
+    margin-bottom: 2rem;
+    margin-left: 2rem;
   }
 }
 
@@ -268,10 +333,22 @@ body {
   width: 4rem;
 }
 
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1025px) {
   .restaurants__affiches {
     display: flex;
     justify-content: center;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .restaurants__affiches {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .col1, .col2 {
+    display: flex;
   }
 }
 
@@ -290,7 +367,7 @@ footer a {
   text-decoration: none;
   color: white;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1025px) {
   footer ul {
     display: flex;
   }
@@ -299,7 +376,7 @@ footer li {
   list-style: none;
   margin-bottom: 0.6rem;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1025px) {
   footer li {
     margin-left: 3rem;
     margin-right: 2rem;
@@ -313,7 +390,7 @@ footer .fa-hands-helping {
   font-size: 0.6rem;
   margin-right: 0.2rem;
 }
-@media screen and (min-width: 1400px) {
+@media screen and (min-width: 1025px) {
   footer {
     display: flex;
     justify-content: center;
@@ -335,7 +412,7 @@ footer .fa-hands-helping {
   -webkit-background-clip: text;
   -webkit-text-stroke: 0px;
   opacity: 1;
-  transition: all 1.5s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 .logo_restau {
@@ -350,19 +427,56 @@ footer .fa-hands-helping {
   margin-left: 1rem;
   margin-right: 5rem;
 }
+.logo_restau i:hover {
+  transform: scale(1.5);
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .logo_restau i {
+    margin-left: 1rem;
+    margin-right: 0;
+  }
+}
 .logo_restau img {
   width: 45%;
 }
+@media screen and (min-width: 1025px) {
+  .logo_restau img {
+    width: 20%;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .logo_restau img {
+    margin: auto;
+  }
+}
 
+@media screen and (min-width: 1025px) {
+  .img_restau {
+    text-align: center;
+  }
+}
 .img_restau img {
   width: 100%;
   height: auto;
+}
+@media screen and (min-width: 1025px) {
+  .img_restau img {
+    height: 20rem;
+    object-fit: cover;
+  }
 }
 
 .img_restau2 img {
   width: 100%;
   height: 17rem;
   object-fit: cover;
+}
+@media screen and (min-width: 1025px) {
+  .img_restau2 img {
+    height: 20rem;
+    object-fit: cover;
+  }
 }
 
 .carte {
@@ -374,25 +488,20 @@ footer .fa-hands-helping {
   margin-bottom: -3.5rem;
 }
 .carte a {
-  display: block;
-  width: 9rem;
   text-decoration: none;
-  color: #f9ecfa;
-  font-size: 1rem;
-  text-align: center;
-  background-image: linear-gradient(#FF79DA, #9356DC);
-  border-radius: 2rem;
-  box-shadow: 2px 3px 11px #C5C0C3;
-  margin: auto;
-  margin-top: 2.5rem;
-  margin-bottom: 3rem;
-  padding: 1rem 1rem 1rem 1rem;
+  color: black;
 }
 .carte_menu {
   margin-bottom: 1rem;
 }
-.carte_menu_plat {
+@media screen and (min-width: 1025px) {
+  .carte_menu {
+    width: 28%;
+  }
+}
+.carte_menu_plat1, .carte_menu_plat2, .carte_menu_plat3, .carte_menu_plat4 {
   background-color: white;
+  position: relative;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -401,20 +510,47 @@ footer .fa-hands-helping {
   margin-bottom: 0.8rem;
   border-radius: 1rem;
 }
-.carte_menu_plat h3 {
+.carte_menu_plat1 h3, .carte_menu_plat2 h3, .carte_menu_plat3 h3, .carte_menu_plat4 h3 {
   font-size: 1rem;
   margin-bottom: 0.3rem;
 }
-.carte_menu_plat span {
+.carte_menu_plat1 span, .carte_menu_plat2 span, .carte_menu_plat3 span, .carte_menu_plat4 span {
   font-size: 0.8rem;
   color: #686868;
 }
-.carte_menu_plat .info {
+.carte_menu_plat1 .info, .carte_menu_plat2 .info, .carte_menu_plat3 .info, .carte_menu_plat4 .info {
   display: flex;
   justify-content: space-between;
 }
-.carte_menu_plat .info strong {
+.carte_menu_plat1 .info strong, .carte_menu_plat2 .info strong, .carte_menu_plat3 .info strong, .carte_menu_plat4 .info strong {
   color: black;
+}
+.carte_menu_plat1 .checkbox, .carte_menu_plat2 .checkbox, .carte_menu_plat3 .checkbox, .carte_menu_plat4 .checkbox {
+  background-color: #99E2D0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 12%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carte_menu_plat1 .checkbox i, .carte_menu_plat2 .checkbox i, .carte_menu_plat3 .checkbox i, .carte_menu_plat4 .checkbox i {
+  color: white;
+  font-size: 1.5rem;
+}
+.carte_menu_plat1 {
+  animation: defilement 1.5s backwards;
+}
+.carte_menu_plat2 {
+  animation: defilement 1.5s 0.2s backwards;
+}
+.carte_menu_plat3 {
+  animation: defilement 1.5s 0.4s backwards;
+}
+.carte_menu_plat4 {
+  animation: defilement 1.5s 0.6s backwards;
 }
 .carte_menu h2 {
   width: 2.5rem;
@@ -424,6 +560,22 @@ footer .fa-hands-helping {
   color: #848484;
   font-weight: normal;
   border-bottom: 0.2rem solid #99E2D0;
+}
+
+@keyframes defilement {
+  0% {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .menus {
+    display: flex;
+    justify-content: space-around;
+  }
 }
 
 .nom_restau {
@@ -439,6 +591,27 @@ footer .fa-hands-helping {
 }
 .nom_restau i {
   font-size: 1.5rem;
+}
+@media screen and (min-width: 1025px) {
+  .nom_restau {
+    justify-content: center;
+  }
+}
+
+.btn a {
+  display: block;
+  width: 9rem;
+  text-decoration: none;
+  color: #f9ecfa;
+  font-size: 1rem;
+  text-align: center;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  border-radius: 2rem;
+  box-shadow: 2px 3px 11px #C5C0C3;
+  margin: auto;
+  margin-top: 2.5rem;
+  margin-bottom: 3rem;
+  padding: 1rem 1rem 1rem 1rem;
 }
 
 .btn a:hover {

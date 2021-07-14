@@ -9,7 +9,13 @@ $tertiaire: #99E2D0;
 }
 
 @mixin desktop {
-    @media screen and (min-width:1400px) {
+    @media screen and (min-width:1025px) {
+        @content;
+    }
+}
+
+@mixin tab {
+    @media screen and (min-width:768px) and (max-width:1024px) {
         @content;
     }
 }
@@ -21,37 +27,65 @@ $tertiaire: #99E2D0;
 }
 body{
     width: 100%;
+    height: auto;
     font-family: Roboto;
 }
 
-/* LOADER */
+/*LOADER*/ 
 .loader {
-    position: absolute;
-    z-index: 999;
-    background-color: $tertiaire;
+    position: fixed;
+    background-color: white;
     width: 100%;
     height: 100%;
-    animation: loader 3s forwards;
+    animation: loader 2s forwards;
     }
 @keyframes loader{
     0%{
         opacity: 1;
+        z-index: 1;
     }
     50%{
         opacity: 1;
+        z-index: 1;
     }
     100%{
         opacity: 0;
+        z-index: -1;
     }
 }
 
-.load{
+.load1{
     position: absolute;
     border-top: 10px solid $primaire;
-    border-bottom: 10px solid $secondaire;
     border-radius: 50%;
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    animation: spin 1.5s linear infinite;
+}
+.load2{
+    position: absolute;
+    border-right: 10px solid $secondaire;
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    animation: spin 1.5s linear infinite;
+}
+.load3{
+    position: absolute;
+    border-bottom: 10px solid $tertiaire;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
     margin: auto;
     top: 0;
     right: 0;
@@ -78,6 +112,9 @@ body{
         width: 50%;
         @include desktop{
             width: 10%;
+        }
+        @include tab{
+            width: 30%;
         }
     }
 }
@@ -141,6 +178,9 @@ body{
         @include desktop{
             text-align: center;
         }
+        @include tab{
+            text-align: center;
+        }
     }
     li{
         width: 80%;
@@ -155,6 +195,14 @@ body{
         h3{
             margin-left: 0.6rem;
         }
+        @include tab{
+            width: 50%;
+            margin: auto;
+            margin-bottom: 2rem;
+        }
+    }
+    @include tab{
+        margin-bottom: 2rem;
     }
 }
 
@@ -180,7 +228,7 @@ body{
             color: white;      
         }
         &:hover{
-            background-color: #f5edff;
+            background-color: #eadff7;
             .fas{
                 color: $primaire;
             }
@@ -218,6 +266,9 @@ body{
     @include desktop{
         text-align: center;
     }
+    @include tab{
+        text-align: center;
+    }
     }
 .restaurants__affiche{
     position: relative;
@@ -244,11 +295,17 @@ body{
         margin-top: 0.4rem;
     }
     @include desktop{
-        width: 20em;
+        width: 20rem;
         height: 16rem;
         margin-right: 2rem;
         margin-left: 1rem;
         margin-top: 1rem;
+    }
+    @include tab{
+        width: 20rem;
+        height: auto;
+        margin-bottom: 2rem;
+        margin-left: 2rem;
     }
 }
 .restaurants__affiche__img{
@@ -278,6 +335,15 @@ body{
     @include desktop{
         display: flex;
         justify-content: center;
+    }
+    @include tab{
+        display: flex;
+        justify-content: center;
+    }
+}
+.col1,.col2{
+    @include desktop{
+        display: flex;
     }
 }
 
@@ -342,7 +408,7 @@ body{
     -webkit-background-clip: text;
     -webkit-text-stroke: 0px;
     opacity:1;
-    transition: all 1.5s ease-in-out;
+    transition: all 1s ease-in-out;
 }
 
    // LOGO
@@ -357,18 +423,37 @@ body{
             color: #353535;
             margin-left: 1rem;
             margin-right: 5rem;
-            
+            &:hover{
+                transform: scale(1.5);
+            }
+            @include tab{
+                margin-left: 1rem;
+                margin-right: 0;
+            }
         }
         img{
             width: 45%;
+            @include desktop{
+                width: 20%;
+                margin: auto;
+            }
+            @include tab{
+                margin: auto;
+            }
         }
     }
 
     .img_restau{
-
+        @include desktop{
+            text-align: center;
+        }
         img{
             width: 100%;
             height: auto;
+            @include desktop{
+                height: 20rem;
+                object-fit: cover;
+            }
         }
     }
     .img_restau2{
@@ -376,6 +461,10 @@ body{
             width: 100%;
             height: 17rem;
             object-fit: cover;
+            @include desktop{
+                height: 20rem;
+                object-fit: cover; 
+            }
         }
     }
 
@@ -387,24 +476,17 @@ body{
         border-top-left-radius: 2rem;
         margin-bottom: -3.5rem;
         a{
-            display: block;
-            width: 9rem;
             text-decoration: none;
-            color: #f9ecfa;
-            font-size: 1rem;
-            text-align: center;
-            background-image: linear-gradient($secondaire, $primaire);
-            border-radius: 2rem;
-            @include shadow;
-            margin: auto;
-            margin-top: 2.5rem;
-            margin-bottom: 3rem;
-            padding: 1rem 1rem 1rem 1rem;
+            color: black;
         }
         &_menu{
             margin-bottom: 1rem;
-            &_plat{
+            @include desktop{
+                width: 28%;
+            }
+            &_plat1, &_plat2, &_plat3, &_plat4{
                 background-color: white;
+                position: relative;
                 overflow: hidden;
                 text-overflow: ellipsis;
                 white-space: nowrap;
@@ -427,6 +509,34 @@ body{
                         color: black;
                     }
                 }
+                
+                .checkbox{
+                    background-color: $tertiaire;
+                    position: absolute;
+                    right: 0;
+                    top: 0;
+                    bottom: 0;
+                    width: 12%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    i{
+                        color: white;
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+            &_plat1{
+                animation: defilement 1.5s backwards;
+            }
+            &_plat2{
+                animation: defilement 1.5s 0.2s backwards;
+            }
+            &_plat3{
+                animation: defilement 1.5s 0.4s backwards;
+            }
+            &_plat4{
+                animation: defilement 1.5s 0.6s backwards;
             }
             h2{
                 width: 2.5rem;
@@ -437,6 +547,23 @@ body{
                 font-weight: normal;
                 border-bottom: 0.2rem solid $tertiaire;
             }
+        }
+    }
+    // Keyframe défilement :
+    @keyframes defilement{
+        0%{
+            opacity: 0;
+            transform: translateY(2rem);
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+
+    .menus{
+        @include desktop{
+            display: flex;
+            justify-content: space-around;
         }
     }
     .nom_restau{
@@ -452,8 +579,26 @@ body{
         i{
             font-size: 1.5rem;
         }
+        @include desktop{
+            justify-content: center;
+        }
     }
 
+    .btn a{
+        display: block;
+        width: 9rem;
+        text-decoration: none;
+        color: #f9ecfa;
+        font-size: 1rem;
+        text-align: center;
+        background-image: linear-gradient($secondaire, $primaire);
+        border-radius: 2rem;
+        @include shadow;
+        margin: auto;
+        margin-top: 2.5rem;
+        margin-bottom: 3rem;
+        padding: 1rem 1rem 1rem 1rem;
+    }
     .btn a{
         &:hover{
             background-image: linear-gradient(#ff99e2, #a073d8);
