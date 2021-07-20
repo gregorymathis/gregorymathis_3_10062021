@@ -1,0 +1,17 @@
+    /* ANIMATION COEUR */
+    .fa-heart{
+        display:flex;
+        font-size: 3em;
+        color:transparent;
+        -webkit-text-stroke:1px black;
+        opacity:0.3;
+    
+    }
+    
+    .fa-heart:hover{
+        background:linear-gradient(#FF79DA, #9356DC);
+        -webkit-background-clip: text;
+        -webkit-text-stroke: 0px;
+        opacity:1;
+        transition: all 1s ease-in-out;
+    }

@@ -1,0 +1,21 @@
+// BOUTTONS
+.btn{
+    a{
+        text-decoration: none;
+        color: #f9ecfa
+    }
+    display: block;
+    width: 12rem;
+    font-size: 1rem;
+    text-align: center;
+    background-image: linear-gradient($secondaire, $primaire);
+    border-radius: 2rem;
+    @include shadow;
+    margin: auto;
+    margin-bottom: 2.5rem;
+    padding: 1rem 1rem 1rem 1rem;
+    &:hover{
+        background-image: linear-gradient(#ff99e2, #a073d8);
+        box-shadow: 2px 3px 11px  #5a5859;
+    }
+}

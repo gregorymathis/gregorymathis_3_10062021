@@ -1,0 +1,173 @@
+    // Keyframe défilement :
+    @keyframes defilement{
+        0%{
+            opacity: 0;
+            transform: translateY(2rem);
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+    // PLATS
+    .carte{
+        transform: translateY(-3.5rem);
+        background-color: #f6f6f6;
+        padding: 1rem;
+        border-top-right-radius: 2rem;
+        border-top-left-radius: 2rem;
+        margin-bottom: -3.5rem;
+        &_menu{
+            margin-bottom: 1rem;
+            a{
+                text-decoration: none;
+                color: black;
+            }
+            @include desktop{
+                width: 28%;
+            }
+            @include tab{
+                width: 45%;
+            }
+            &_plat1, &_plat2, &_plat3, &_plat4, &_plat5, &_plat6, &_plat7, &_plat8, &_plat9, &_plat10{
+                display: flex;
+                justify-content: space-between;
+                background-color: white;
+                position: relative;
+                overflow: hidden;
+                margin: auto;
+                margin-bottom: 0.8rem;
+                border-radius: 1rem;
+
+                .style{
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+                // ANIMATION CHECKBOX
+                &:hover{
+                    .plat{
+                        width: 78%;
+                        transition-duration: 600ms;
+                    }
+                    .checkbox{
+                        width: 18%;
+                        transform: translateX(-4.5rem);
+                        transition: transform 800ms;
+                    }
+                    .fa-check-circle{
+                        display: inline-block;
+                        transform: rotate(360deg);
+                        transition: transform 800ms;
+                    }
+                }
+                h3{
+                    font-size: 1rem;
+                    margin-bottom: 0.3rem;
+                }
+                span{
+                    font-size: 0.8rem;
+                    color: #686868;
+                }
+                .info{
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+                    strong{
+                        color: black;
+                        padding-right: 1rem;
+                    }
+                }
+                }
+                .plat{
+                    width: 100%;
+                    padding: 0.8rem;
+                }
+                .checkbox{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    overflow: hidden;
+                    background-color: $tertiaire;
+                    width: 0%;
+                    margin: 0;
+                    margin-right: -4.5rem;
+                    padding: 0;
+                    i{
+                        color: white;
+                        font-size: 1.5rem;
+                    }
+                }
+            &_plat1{
+                animation: defilement 1.5s backwards;
+            }
+            &_plat2{
+                animation: defilement 1.5s 0.2s backwards;
+            }
+            &_plat3{
+                animation: defilement 1.5s 0.4s backwards;
+            }
+            &_plat4{
+                animation: defilement 1.5s 0.6s backwards;
+            }
+            &_plat5{
+                animation: defilement 1.5s 0.8s backwards;
+            }
+            &_plat6{
+                animation: defilement 1.5s 1s backwards;
+            }
+            &_plat7{
+                animation: defilement 1.5s 1.2s backwards;
+            }
+            &_plat8{
+                animation: defilement 1.5s 1.4s backwards;
+            }
+            &_plat9{
+                animation: defilement 1.5s 1.6s backwards;
+            }
+            &_plat10{
+                animation: defilement 1.5s 1.8s backwards;
+            }
+            h2{
+                width: 2.5rem;
+                padding-bottom: 0.2rem;
+                margin-bottom: 1rem;
+                font-size: 1rem;
+                color: #848484;
+                font-weight: normal;
+                border-bottom: 0.2rem solid $tertiaire;
+            }
+        }
+    }
+
+    .menus{
+        @include desktop{
+            display: flex;
+            justify-content: space-around;
+        }
+        @include tab{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+    }
+
+    .nom_restau{
+        display: flex;
+        align-items: center;
+        font-family: Shrikhand;
+        font-size: 1.1rem;
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+        h1{
+            margin-right: 2.5rem;
+        }
+        i{
+            font-size: 1.5rem;
+        }
+        @include desktop{
+            justify-content: center;
+        }
+        @include tab{
+            justify-content: center;
+        }
+    }

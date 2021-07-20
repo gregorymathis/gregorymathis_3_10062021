@@ -1,0 +1,209 @@
+/* POSITION */
+
+.position{
+    text-align: center;
+    font-weight: bold;
+    padding: 1rem;
+    background-color: #eaeaea;
+    color: #3a3a3a;
+    box-shadow: inset 0 0.2rem 0.2rem #d5d5d5;
+    i{
+        padding-right: 1rem;
+    }
+}
+
+/* ACCUEIL */
+
+.accueil{
+    text-align: center;
+    background-color: #f6f6f6;
+    padding: 1rem;
+    h1{
+        margin: 2rem 2rem 0.8rem 2rem;
+    }
+    p{
+        font-size: 1.2rem;
+        color: #858585;
+        margin-bottom: 2rem;
+    }
+    
+}
+
+/* FONCTIONNEMENT */
+
+.bloc_fonctionnement{
+    margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    h2{
+        margin: 3rem 0rem 2rem 1.5rem;
+        @include desktop{
+            text-align: center;
+        }
+        @include tab{
+            text-align: center;
+        }
+    }
+    li{
+        width: 80%;
+        margin-left: 2.3rem;
+        font-size: 0.8rem;
+        font-weight: bold;
+        background-color: #f6f6f6;
+        padding: 1.4rem 1.4rem 1.4rem 0;
+        margin-bottom: 1.5rem;
+        border-radius: 1.5rem;
+        @include shadow;
+        h3{
+            margin-left: 0.6rem;
+        }
+        @include tab{
+            width: 50%;
+            margin: auto;
+            margin-bottom: 2rem;
+        }
+    }
+    @include tab{
+        margin-bottom: 2rem;
+    }
+}
+
+.fonctionnement{
+    display:flex;
+    flex-direction:column;
+    counter-reset: repas; /* on initialise et nomme un compteur */
+
+    &__menu{
+    display: flex;
+    list-style-type: none;
+    counter-increment: repas; /* on incrémente le compteur à chaque nouveau li */
+        &:before{
+            content: counter(repas); /* on affiche le compteur */
+            padding: 0.3rem 0.5rem 0.3rem 0.5rem;
+            margin-right: 1.2rem;
+            margin-left: -0.7rem;
+            vertical-align: top;
+            background: $primaire;
+            border-radius: 1rem;
+            font-weight: bold;
+            font-size: 0.8em;
+            color: white;      
+        }
+        &:hover{
+            background-color: #eadff7;
+            .fas{
+                color: $primaire;
+            }
+        }
+    }
+    @include desktop{
+        display: flex;
+        flex-direction: row;
+        width: 80%;
+        margin: auto;
+        margin-bottom: -2rem;
+    }
+}
+
+.icon{
+ padding : 5px 20px 5px 5px;
+ color: #7e7e7e;
+ 
+}
+
+/* RESTAURANTS */
+
+.restaurants{
+    background-color: #f6f6f6;
+    padding-bottom: 2.8rem;
+    h2{
+        padding: 3rem 0rem 1.3rem 1.5rem;
+      }
+    &__affiches{
+        a{
+            text-decoration: none;
+            color: black;
+        }
+    }
+    @include desktop{
+        text-align: center;
+    }
+    @include tab{
+        text-align: center;
+    }
+    }
+.restaurants__affiche{
+    position: relative;
+    width: 90%;
+    margin: auto;
+    height: 25%;
+    margin-bottom: 1.2rem;
+    @include shadow;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    &__description{
+        padding: 0.8rem;
+        display: flex;
+        justify-content: space-between;
+        p{
+            font-size: 1.1rem;
+            color: #404040;
+            margin-top: 0.2rem;
+        }
+    }
+    i{
+        font-size: 1.5rem;
+        margin-right: 0.8rem;
+        margin-top: 0.4rem;
+    }
+    @include desktop{
+        width: 20rem;
+        height: 16rem;
+        margin-right: 2rem;
+        margin-left: 1rem;
+        margin-top: 1rem;
+    }
+    @include tab{
+        width: 20rem;
+        height: auto;
+        margin: 0 1rem 2rem 1rem;
+    }
+}
+.restaurants__affiche__img{
+    width: 100%;
+    height: 11rem;
+}
+.restaurants img{
+    width: 100%;
+    height: 11rem;
+    object-fit: cover;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+.restaurants__affiche__img p{
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 0.9rem;
+    background-color: $tertiaire;
+    color: #078b6b;
+    border-radius: 0.1rem;
+    text-align: center;
+    padding: 0.4rem;
+    width: 4rem;
+}
+.restaurants__affiches{
+    @include desktop{
+        display: flex;
+        justify-content: center;
+    }
+    @include tab{
+        display: flex;
+        justify-content: center;
+    }
+}
+.col1,.col2{
+    @include desktop{
+        display: flex;
+    }
+}

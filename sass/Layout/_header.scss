@@ -1,0 +1,47 @@
+// HEADER ACCUEIL
+
+.logo{
+    text-align: center;
+    padding: 1rem;
+    img{
+        width: 50%;
+        @include desktop{
+            width: 10%;
+        }
+        @include tab{
+            width: 30%;
+        }
+    }
+}
+
+// HEADER RESTAURANTS
+
+   .logo_restau{
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    margin-right: 1rem;
+    i{
+        font-size: 1rem;
+        color: #353535;
+        margin-left: 1rem;
+        margin-right: 5rem;
+        &:hover{
+            transform: scale(1.5);
+        }
+        @include tab{
+            margin-left: 1rem;
+            margin-right: 0;
+        }
+    }
+    img{
+        width: 45%;
+        @include desktop{
+            width: 20%;
+            margin: auto;
+        }
+        @include tab{
+            margin: auto;
+        }
+    }
+}

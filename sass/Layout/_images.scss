@@ -1,0 +1,33 @@
+ // IMAGES RESTAURANTS
+ .img_restau{
+    @include desktop{
+        text-align: center;
+    }
+    img{
+        width: 100%;
+        height: auto;
+        @include desktop{
+            height: 20rem;
+            object-fit: cover;
+        }
+        @include tab{
+            height: 20rem;
+            object-fit: cover;
+        }
+    }
+}
+.img_restau2{
+    img{
+        width: 100%;
+        height: 17rem;
+        object-fit: cover;
+        @include desktop{
+            height: 20rem;
+            object-fit: cover; 
+        }
+        @include tab{
+            height: 20rem;
+            object-fit: cover; 
+        }
+    }
+}

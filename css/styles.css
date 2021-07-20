@@ -11,7 +11,182 @@ body {
   font-family: Roboto;
 }
 
-/*LOADER*/
+.btn {
+  display: block;
+  width: 12rem;
+  font-size: 1rem;
+  text-align: center;
+  background-image: linear-gradient(#FF79DA, #9356DC);
+  border-radius: 2rem;
+  box-shadow: 2px 3px 11px #C5C0C3;
+  margin: auto;
+  margin-bottom: 2.5rem;
+  padding: 1rem 1rem 1rem 1rem;
+}
+.btn a {
+  text-decoration: none;
+  color: #f9ecfa;
+}
+.btn:hover {
+  background-image: linear-gradient(#ff99e2, #a073d8);
+  box-shadow: 2px 3px 11px #5a5859;
+}
+
+/* ANIMATION COEUR */
+.fa-heart {
+  display: flex;
+  font-size: 3em;
+  color: transparent;
+  -webkit-text-stroke: 1px black;
+  opacity: 0.3;
+}
+
+.fa-heart:hover {
+  background: linear-gradient(#FF79DA, #9356DC);
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 0px;
+  opacity: 1;
+  transition: all 1s ease-in-out;
+}
+
+.logo {
+  text-align: center;
+  padding: 1rem;
+}
+.logo img {
+  width: 50%;
+}
+@media screen and (min-width: 1025px) {
+  .logo img {
+    width: 10%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .logo img {
+    width: 30%;
+  }
+}
+
+.logo_restau {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  margin-right: 1rem;
+}
+.logo_restau i {
+  font-size: 1rem;
+  color: #353535;
+  margin-left: 1rem;
+  margin-right: 5rem;
+}
+.logo_restau i:hover {
+  transform: scale(1.5);
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .logo_restau i {
+    margin-left: 1rem;
+    margin-right: 0;
+  }
+}
+.logo_restau img {
+  width: 45%;
+}
+@media screen and (min-width: 1025px) {
+  .logo_restau img {
+    width: 20%;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .logo_restau img {
+    margin: auto;
+  }
+}
+
+footer {
+  background-color: #353535;
+  color: white;
+  padding: 1.5rem;
+}
+footer p {
+  font-family: "Shrikhand";
+  font-size: 1.1rem;
+  margin-bottom: 1.3rem;
+}
+footer a {
+  text-decoration: none;
+  color: white;
+}
+@media screen and (min-width: 1025px) {
+  footer ul {
+    display: flex;
+  }
+}
+footer li {
+  list-style: none;
+  margin-bottom: 0.6rem;
+}
+@media screen and (min-width: 1025px) {
+  footer li {
+    margin-left: 3rem;
+    margin-right: 2rem;
+  }
+}
+footer .fa-utensils {
+  font-size: 0.8rem;
+  margin-right: 0.3rem;
+}
+footer .fa-hands-helping {
+  font-size: 0.6rem;
+  margin-right: 0.2rem;
+}
+@media screen and (min-width: 1025px) {
+  footer {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .img_restau {
+    text-align: center;
+  }
+}
+.img_restau img {
+  width: 100%;
+  height: auto;
+}
+@media screen and (min-width: 1025px) {
+  .img_restau img {
+    height: 20rem;
+    object-fit: cover;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .img_restau img {
+    height: 20rem;
+    object-fit: cover;
+  }
+}
+
+.img_restau2 img {
+  width: 100%;
+  height: 17rem;
+  object-fit: cover;
+}
+@media screen and (min-width: 1025px) {
+  .img_restau2 img {
+    height: 20rem;
+    object-fit: cover;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .img_restau2 img {
+    height: 20rem;
+    object-fit: cover;
+  }
+}
+
 .loader {
   position: fixed;
   background-color: white;
@@ -84,25 +259,6 @@ body {
     transform: rotate(360deg);
   }
 }
-/* HEADER */
-.logo {
-  text-align: center;
-  padding: 1rem;
-}
-.logo img {
-  width: 50%;
-}
-@media screen and (min-width: 1025px) {
-  .logo img {
-    width: 10%;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .logo img {
-    width: 30%;
-  }
-}
-
 /* POSITION */
 .position {
   text-align: center;
@@ -129,24 +285,6 @@ body {
   font-size: 1.2rem;
   color: #858585;
   margin-bottom: 2rem;
-}
-.accueil a {
-  display: block;
-  width: 12rem;
-  text-decoration: none;
-  color: #f9ecfa;
-  font-size: 1rem;
-  text-align: center;
-  background-image: linear-gradient(#FF79DA, #9356DC);
-  border-radius: 2rem;
-  box-shadow: 2px 3px 11px #C5C0C3;
-  margin: auto;
-  margin-bottom: 2.5rem;
-  padding: 1rem 1rem 1rem 1rem;
-}
-.accueil a:hover {
-  background-image: linear-gradient(#ff99e2, #a073d8);
-  box-shadow: 2px 3px 11px #5a5859;
 }
 
 /* FONCTIONNEMENT */
@@ -302,8 +440,7 @@ body {
   .restaurants__affiche {
     width: 20rem;
     height: auto;
-    margin-bottom: 2rem;
-    margin-left: 2rem;
+    margin: 0 1rem 2rem 1rem;
   }
 }
 
@@ -352,133 +489,15 @@ body {
   }
 }
 
-/* FOOTER */
-footer {
-  background-color: #353535;
-  color: white;
-  padding: 1.5rem;
-}
-footer p {
-  font-family: "Shrikhand";
-  font-size: 1.1rem;
-  margin-bottom: 1.3rem;
-}
-footer a {
-  text-decoration: none;
-  color: white;
-}
-@media screen and (min-width: 1025px) {
-  footer ul {
-    display: flex;
+@keyframes defilement {
+  0% {
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+  100% {
+    opacity: 1;
   }
 }
-footer li {
-  list-style: none;
-  margin-bottom: 0.6rem;
-}
-@media screen and (min-width: 1025px) {
-  footer li {
-    margin-left: 3rem;
-    margin-right: 2rem;
-  }
-}
-footer .fa-utensils {
-  font-size: 0.8rem;
-  margin-right: 0.3rem;
-}
-footer .fa-hands-helping {
-  font-size: 0.6rem;
-  margin-right: 0.2rem;
-}
-@media screen and (min-width: 1025px) {
-  footer {
-    display: flex;
-    justify-content: center;
-  }
-}
-
-/* AUTRES RESTAURANTS */
-/* ANIMATION COEUR */
-.fa-heart {
-  display: flex;
-  font-size: 3em;
-  color: transparent;
-  -webkit-text-stroke: 1px black;
-  opacity: 0.3;
-}
-
-.fa-heart:hover {
-  background: linear-gradient(#FF79DA, #9356DC);
-  -webkit-background-clip: text;
-  -webkit-text-stroke: 0px;
-  opacity: 1;
-  transition: all 1s ease-in-out;
-}
-
-.logo_restau {
-  display: flex;
-  align-items: center;
-  padding: 0.5rem;
-  margin-right: 1rem;
-}
-.logo_restau i {
-  font-size: 1rem;
-  color: #353535;
-  margin-left: 1rem;
-  margin-right: 5rem;
-}
-.logo_restau i:hover {
-  transform: scale(1.5);
-}
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .logo_restau i {
-    margin-left: 1rem;
-    margin-right: 0;
-  }
-}
-.logo_restau img {
-  width: 45%;
-}
-@media screen and (min-width: 1025px) {
-  .logo_restau img {
-    width: 20%;
-    margin: auto;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .logo_restau img {
-    margin: auto;
-  }
-}
-
-@media screen and (min-width: 1025px) {
-  .img_restau {
-    text-align: center;
-  }
-}
-.img_restau img {
-  width: 100%;
-  height: auto;
-}
-@media screen and (min-width: 1025px) {
-  .img_restau img {
-    height: 20rem;
-    object-fit: cover;
-  }
-}
-
-.img_restau2 img {
-  width: 100%;
-  height: 17rem;
-  object-fit: cover;
-}
-@media screen and (min-width: 1025px) {
-  .img_restau2 img {
-    height: 20rem;
-    object-fit: cover;
-  }
-}
-
 .carte {
   transform: translateY(-3.5rem);
   background-color: #f6f6f6;
@@ -487,56 +506,85 @@ footer .fa-hands-helping {
   border-top-left-radius: 2rem;
   margin-bottom: -3.5rem;
 }
-.carte a {
-  text-decoration: none;
-  color: black;
-}
 .carte_menu {
   margin-bottom: 1rem;
+}
+.carte_menu a {
+  text-decoration: none;
+  color: black;
 }
 @media screen and (min-width: 1025px) {
   .carte_menu {
     width: 28%;
   }
 }
-.carte_menu_plat1, .carte_menu_plat2, .carte_menu_plat3, .carte_menu_plat4 {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .carte_menu {
+    width: 45%;
+  }
+}
+.carte_menu_plat1, .carte_menu_plat2, .carte_menu_plat3, .carte_menu_plat4, .carte_menu_plat5, .carte_menu_plat6, .carte_menu_plat7, .carte_menu_plat8, .carte_menu_plat9, .carte_menu_plat10 {
+  display: flex;
+  justify-content: space-between;
   background-color: white;
   position: relative;
   overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  padding: 0.8rem;
   margin: auto;
   margin-bottom: 0.8rem;
   border-radius: 1rem;
 }
-.carte_menu_plat1 h3, .carte_menu_plat2 h3, .carte_menu_plat3 h3, .carte_menu_plat4 h3 {
+.carte_menu_plat1 .style, .carte_menu_plat2 .style, .carte_menu_plat3 .style, .carte_menu_plat4 .style, .carte_menu_plat5 .style, .carte_menu_plat6 .style, .carte_menu_plat7 .style, .carte_menu_plat8 .style, .carte_menu_plat9 .style, .carte_menu_plat10 .style {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.carte_menu_plat1:hover .plat, .carte_menu_plat2:hover .plat, .carte_menu_plat3:hover .plat, .carte_menu_plat4:hover .plat, .carte_menu_plat5:hover .plat, .carte_menu_plat6:hover .plat, .carte_menu_plat7:hover .plat, .carte_menu_plat8:hover .plat, .carte_menu_plat9:hover .plat, .carte_menu_plat10:hover .plat {
+  width: 78%;
+  transition-duration: 600ms;
+}
+.carte_menu_plat1:hover .checkbox, .carte_menu_plat2:hover .checkbox, .carte_menu_plat3:hover .checkbox, .carte_menu_plat4:hover .checkbox, .carte_menu_plat5:hover .checkbox, .carte_menu_plat6:hover .checkbox, .carte_menu_plat7:hover .checkbox, .carte_menu_plat8:hover .checkbox, .carte_menu_plat9:hover .checkbox, .carte_menu_plat10:hover .checkbox {
+  width: 18%;
+  transform: translateX(-4.5rem);
+  transition: transform 800ms;
+}
+.carte_menu_plat1:hover .fa-check-circle, .carte_menu_plat2:hover .fa-check-circle, .carte_menu_plat3:hover .fa-check-circle, .carte_menu_plat4:hover .fa-check-circle, .carte_menu_plat5:hover .fa-check-circle, .carte_menu_plat6:hover .fa-check-circle, .carte_menu_plat7:hover .fa-check-circle, .carte_menu_plat8:hover .fa-check-circle, .carte_menu_plat9:hover .fa-check-circle, .carte_menu_plat10:hover .fa-check-circle {
+  display: inline-block;
+  transform: rotate(360deg);
+  transition: transform 800ms;
+}
+.carte_menu_plat1 h3, .carte_menu_plat2 h3, .carte_menu_plat3 h3, .carte_menu_plat4 h3, .carte_menu_plat5 h3, .carte_menu_plat6 h3, .carte_menu_plat7 h3, .carte_menu_plat8 h3, .carte_menu_plat9 h3, .carte_menu_plat10 h3 {
   font-size: 1rem;
   margin-bottom: 0.3rem;
 }
-.carte_menu_plat1 span, .carte_menu_plat2 span, .carte_menu_plat3 span, .carte_menu_plat4 span {
+.carte_menu_plat1 span, .carte_menu_plat2 span, .carte_menu_plat3 span, .carte_menu_plat4 span, .carte_menu_plat5 span, .carte_menu_plat6 span, .carte_menu_plat7 span, .carte_menu_plat8 span, .carte_menu_plat9 span, .carte_menu_plat10 span {
   font-size: 0.8rem;
   color: #686868;
 }
-.carte_menu_plat1 .info, .carte_menu_plat2 .info, .carte_menu_plat3 .info, .carte_menu_plat4 .info {
+.carte_menu_plat1 .info, .carte_menu_plat2 .info, .carte_menu_plat3 .info, .carte_menu_plat4 .info, .carte_menu_plat5 .info, .carte_menu_plat6 .info, .carte_menu_plat7 .info, .carte_menu_plat8 .info, .carte_menu_plat9 .info, .carte_menu_plat10 .info {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
-.carte_menu_plat1 .info strong, .carte_menu_plat2 .info strong, .carte_menu_plat3 .info strong, .carte_menu_plat4 .info strong {
+.carte_menu_plat1 .info strong, .carte_menu_plat2 .info strong, .carte_menu_plat3 .info strong, .carte_menu_plat4 .info strong, .carte_menu_plat5 .info strong, .carte_menu_plat6 .info strong, .carte_menu_plat7 .info strong, .carte_menu_plat8 .info strong, .carte_menu_plat9 .info strong, .carte_menu_plat10 .info strong {
   color: black;
+  padding-right: 1rem;
 }
-.carte_menu_plat1 .checkbox, .carte_menu_plat2 .checkbox, .carte_menu_plat3 .checkbox, .carte_menu_plat4 .checkbox {
-  background-color: #99E2D0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 12%;
+.carte_menu .plat {
+  width: 100%;
+  padding: 0.8rem;
+}
+.carte_menu .checkbox {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #99E2D0;
+  width: 0%;
+  margin: 0;
+  margin-right: -4.5rem;
+  padding: 0;
 }
-.carte_menu_plat1 .checkbox i, .carte_menu_plat2 .checkbox i, .carte_menu_plat3 .checkbox i, .carte_menu_plat4 .checkbox i {
+.carte_menu .checkbox i {
   color: white;
   font-size: 1.5rem;
 }
@@ -552,6 +600,24 @@ footer .fa-hands-helping {
 .carte_menu_plat4 {
   animation: defilement 1.5s 0.6s backwards;
 }
+.carte_menu_plat5 {
+  animation: defilement 1.5s 0.8s backwards;
+}
+.carte_menu_plat6 {
+  animation: defilement 1.5s 1s backwards;
+}
+.carte_menu_plat7 {
+  animation: defilement 1.5s 1.2s backwards;
+}
+.carte_menu_plat8 {
+  animation: defilement 1.5s 1.4s backwards;
+}
+.carte_menu_plat9 {
+  animation: defilement 1.5s 1.6s backwards;
+}
+.carte_menu_plat10 {
+  animation: defilement 1.5s 1.8s backwards;
+}
 .carte_menu h2 {
   width: 2.5rem;
   padding-bottom: 0.2rem;
@@ -562,18 +628,16 @@ footer .fa-hands-helping {
   border-bottom: 0.2rem solid #99E2D0;
 }
 
-@keyframes defilement {
-  0% {
-    opacity: 0;
-    transform: translateY(2rem);
-  }
-  100% {
-    opacity: 1;
-  }
-}
 @media screen and (min-width: 1025px) {
   .menus {
     display: flex;
+    justify-content: space-around;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .menus {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
   }
 }
@@ -597,26 +661,10 @@ footer .fa-hands-helping {
     justify-content: center;
   }
 }
-
-.btn a {
-  display: block;
-  width: 9rem;
-  text-decoration: none;
-  color: #f9ecfa;
-  font-size: 1rem;
-  text-align: center;
-  background-image: linear-gradient(#FF79DA, #9356DC);
-  border-radius: 2rem;
-  box-shadow: 2px 3px 11px #C5C0C3;
-  margin: auto;
-  margin-top: 2.5rem;
-  margin-bottom: 3rem;
-  padding: 1rem 1rem 1rem 1rem;
-}
-
-.btn a:hover {
-  background-image: linear-gradient(#ff99e2, #a073d8);
-  box-shadow: 2px 3px 11px #5a5859;
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .nom_restau {
+    justify-content: center;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
