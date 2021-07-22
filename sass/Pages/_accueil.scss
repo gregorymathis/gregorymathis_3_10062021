@@ -139,8 +139,7 @@
     height: 25%;
     margin-bottom: 1.2rem;
     @include shadow;
-    border-bottom-left-radius: 1rem;
-    border-bottom-right-radius: 1rem;
+    border-radius: 1rem;
     &__description{
         padding: 0.8rem;
         display: flex;
@@ -157,8 +156,8 @@
         margin-top: 0.4rem;
     }
     @include desktop{
-        width: 20rem;
-        height: 16rem;
+        width: 18rem;
+        height: 15rem;
         margin-right: 2rem;
         margin-left: 1rem;
         margin-top: 1rem;

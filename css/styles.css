@@ -410,8 +410,7 @@ footer .fa-hands-helping {
   height: 25%;
   margin-bottom: 1.2rem;
   box-shadow: 2px 3px 11px #C5C0C3;
-  border-bottom-left-radius: 1rem;
-  border-bottom-right-radius: 1rem;
+  border-radius: 1rem;
 }
 .restaurants__affiche__description {
   padding: 0.8rem;
@@ -430,8 +429,8 @@ footer .fa-hands-helping {
 }
 @media screen and (min-width: 1025px) {
   .restaurants__affiche {
-    width: 20rem;
-    height: 16rem;
+    width: 18rem;
+    height: 15rem;
     margin-right: 2rem;
     margin-left: 1rem;
     margin-top: 1rem;
@@ -568,7 +567,7 @@ footer .fa-hands-helping {
 }
 .carte_menu_plat1 .info strong, .carte_menu_plat2 .info strong, .carte_menu_plat3 .info strong, .carte_menu_plat4 .info strong, .carte_menu_plat5 .info strong, .carte_menu_plat6 .info strong, .carte_menu_plat7 .info strong, .carte_menu_plat8 .info strong, .carte_menu_plat9 .info strong, .carte_menu_plat10 .info strong {
   color: black;
-  padding-right: 1rem;
+  padding-right: 2rem;
 }
 .carte_menu .plat {
   width: 100%;
